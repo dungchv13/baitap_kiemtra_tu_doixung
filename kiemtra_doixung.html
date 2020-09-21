@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrom(arr){
+        if(arr.length == 1 || arr.length == 0){
+            return true;
+        }else {
+            if (arr[0] == arr[arr.length - 1]) {
+                arr.pop();
+                arr.shift();
+                return isPalindrom(arr);
+            } else {
+                return false;
+            }
+        }
+    }
+    let a = prompt('nhap tu ban muon kiem tra tinh doi xung');
+    let array = a.split('');
+    if(isPalindrom(array)){
+        alert('tu ban vua nhap la 1 tu doi xung');
+    }else{
+        alert('tu ban vua nhap ko phai la tu doi xung');
+    }
+</script>
+</body>
+</html>
